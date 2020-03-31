@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.seops.bluetoothstate.R;
 import com.seops.bluetoothstatelib.BluetoothState;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity implements BluetoothStateObs
     private static final String TAG = "[MainActivity] ";
     private Context mContext;
     private BluetoothStateManagerImpl bluetoothStateManager;
+
+    private TextView textBluetoothState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +36,11 @@ public class MainActivity extends AppCompatActivity implements BluetoothStateObs
     }
 
     private void initViews() {
-
+        textBluetoothState = (TextView) findViewById(R.id.bluetoothState);
     }
 
     private void setViews() {
-
+        textBluetoothState.setText("NONE");
     }
 
     @Override
@@ -69,5 +72,7 @@ public class MainActivity extends AppCompatActivity implements BluetoothStateObs
             default:
                 break;
         }
+
+        textBluetoothState.setText(state.name());
     }
 }
