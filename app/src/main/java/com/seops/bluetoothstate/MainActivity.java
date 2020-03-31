@@ -1,4 +1,4 @@
-package com.seops.bluetoothstate.ui;
+package com.seops.bluetoothstate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.seops.bluetoothstate.R;
-import com.seops.bluetoothstate.bluetooth.BluetoothState;
-import com.seops.bluetoothstate.bluetooth.BluetoothStateManagerImpl;
-import com.seops.bluetoothstate.bluetooth.BluetoothStateObserver;
+import com.seops.bluetoothstatelib.BluetoothState;
+import com.seops.bluetoothstatelib.BluetoothStateManagerImpl;
+import com.seops.bluetoothstatelib.BluetoothStateObserver;
 
 public class MainActivity extends AppCompatActivity implements BluetoothStateObserver {
     private static final String TAG = "[MainActivity] ";

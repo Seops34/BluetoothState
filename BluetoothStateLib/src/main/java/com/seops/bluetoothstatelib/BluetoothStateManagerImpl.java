@@ -1,4 +1,4 @@
-package com.seops.bluetoothstate.bluetooth;
+package com.seops.bluetoothstatelib;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

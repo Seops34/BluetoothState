@@ -1,4 +1,4 @@
-package com.seops.bluetoothstate.bluetooth;
+package com.seops.bluetoothstatelib;
 
 public interface BluetoothStateManager {
     void registerObserver(BluetoothStateObserver observer);
